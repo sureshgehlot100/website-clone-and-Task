@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Tailwind </title>
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- isme container fluid or container nhi hota -->
+    <div class="w-100 border-2 border-red-700">
+      <div class="max-w-[90%] border-2 border-red-700 mx-auto">
+        <div class="grid md:grid-cols-[50%_50%] lg:grid-cols-[20%_30%_auto]">
+          <!-- grid-cols-[] isse hum 2 bhag ko apni necessary k anusar bat sakte hai -->
+          <div class="logo bg-[red] h-[100px]">
+
+          </div>
+          <div class="logo bg-[blue] h-[100px]">
+
+          </div>
+          <div class="menubar bg-[green] lg:col-span-1 md:col-span-2 h-[100px]">
+            <!-- lg me ye 1 pura div banega md me 2 ki jagah le lega -->
+
+          </div>
+        </div>
+      </div>
+      <div class="max-w-[90%] border-2 border-red-700 mx-auto">
+        <div class="flex lg:flex-row flex-col w-[100%]">
+          <div class="basis-[50%] text-center lg:text-start border-2 bg-[cyan] border-red-700">
+            <p class="text-[25px] p-[10px_15px]"> Success-oriented learning! icon </p>
+            <h1 class="text-[50px] p-[10px_15px] font-bold"> Fueling Skills, Igniting Careers </h1>
+            <p class="text-[20px] p-[10px_15px]"> 
+              Master industry-relevant skills with our vernacular online courses. Choose your program, get certified, and open doors to lucrative career opportunities.
+            </p>
+          </div>
+          <div class="basis-[50%] border-2 border-red-700 h-[100%]">
+            <img src="https://www.wscubetech.com/images/banner-right-img.webp" class="w-[100%] h-[100%]" alt="">
+          </div>
+        </div>
+        <div class="flex border-2 flex-col lg:flex-row border-red-700 gap-[10px]">
+          <div class="grow border-2 border-red-700 h-[200px]"></div>
+          <div class="grow border-2 border-red-700 h-[200px]"></div>
+          <div class="grow border-2 border-red-700 h-[200px]"></div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

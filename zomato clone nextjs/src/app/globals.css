@@ -1,0 +1,99 @@
+.mainImgaes{
+    height:600px;
+}
+.background {
+    background-image: url('https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png');
+    background-size: cover;
+    background-position: center;
+    height:600px;
+  }
+.zom_login{width:96%;
+           height:10%}
+.text{font-size:20px;
+ line-height:30px;
+ padding-top:20px;
+width:30%;}
+.ulSlider{list-style:none;
+    width:100%;
+}
+.navbar{width:50%;}
+.zomatatext{font-size:100px;
+    font-family: Okra, Helvetica, sans-serif;
+    width:30%;
+    margin:auto;}
+.zomatatext2{
+        font-family: sans-serif;
+        width:60%;
+        margin:auto;
+        font-size:50px  
+    }
+.formDetail{
+    width:73%;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 5.2rem;
+    background: rgb(255, 255, 255);
+    border-radius: 0.8rem;
+    box-shadow: rgba(28, 28, 28, 0.08) 0px 2px 8px;
+    border: 1px solid rgb(232, 232, 232);
+}
+.location{
+    font-size:25px;
+    border:none; 
+}
+.iwHbVQ {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    width: 28px;
+    height: 18px;
+}
+.ezrcri {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    width: 18px;
+    height: 18px;
+    
+}
+.egIwfr {
+    border: none;
+    font-size: 1.4rem;
+    width: 100%;
+    border-radius: 0.8rem;
+    padding:12px;
+}
+.headercard{box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    height:400px;}
+.cardclassss{height:450px;
+   }
+.ieGrdM {
+        padding: 1rem 2rem 1.6rem;
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        background: white;
+        border: 1px solid rgb(232, 232, 232);
+        border-radius: 0px 0px 1.2rem 1.2rem;
+        box-sizing: border-box;
+    }
+.collt_text{
+    font-size: 3.6rem;
+    line-height: 1.2;
+    font-weight: 400;
+    color: rgb(28, 28, 28);
+}
+
+.cgEqWV {
+    color: rgb(28, 28, 28);
+    margin: 0px 0px 1.5rem;
+    font-weight: 500;
+    font-size: 4.0rem;
+    line-height: 5.6rem;
+}
+.PopularItem>li{
+    margin-right:23px;
+   
+}

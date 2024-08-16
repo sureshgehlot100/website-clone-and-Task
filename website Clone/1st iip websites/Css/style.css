@@ -1,0 +1,128 @@
+*{Padding:0px;margin: 0px;
+       }
+      a{text-decoration: none;
+         color: inherit;
+        }
+
+    .main{width: 1000px;
+            height:800px;
+            background-color: black;
+            margin:auto; }
+     .row1{width: 1000px;
+            height: 200px;
+            background-image:url('images/headerbg.jpg');
+            background-position: center center; 
+            background-size:cover;
+            text-align:center; }
+        .row1_c1{width: 230px;
+                height: 200px;
+                float: left;
+                
+               }
+           .logo{margin-top: 20px}
+        .row1_c2{width: 400px;
+                height:200px;
+                float:left; 
+                 }
+             .text1{width: 400px;
+                height:80px; font-size: 20px; font-weight: bold;
+                float:left; color: #00618a; margin-top: 60px;
+                 text-align: center;}
+        .row1_c3{width: 360px;
+                height:200px;
+                float:left;
+                 
+                }
+            .contactInfo {width: 300px;
+                          height: 140px;
+                          background-image:url(images/topcontactbg.png);
+                          background-position:no repeat; background-size:cover ;margin-top: 20px;margin-left: 20px; 
+                          } 
+                .web{width: 300px;
+                    height: 40px;font-size: 25px;margin-top: 7px;
+                              }
+                .mailid{width: 300px;
+                               height: 40px;font-size: 25px; font-weight:bold;margin-top: 7px;} 
+                .phoneno{width: 300px; color: white;
+                               height: 40px;font-size: 25px; font-weight:bold;margin-top: 7px;
+                           }
+     .row2{width: 1000px;
+           height: 50px;
+           background-image:url('images/menubg.jpg');
+           border-radius: 10px;
+           }                     
+        .menubar{width: 1000px;
+                list-style:none;
+                }  
+         .menuitem{width:127px;
+                   height: 44px;
+                   background-image:url('images/menubackground.png') ;
+                   margin-left: 20px;
+                   float: left; font-weight: bold;
+                   text-align: center;
+                   line-height:44px;
+                   margin-top:8px; }
+                .home{margin-left: 75px;}
+      
+      .row3{width: 1000px;
+            height:265px;
+              }      
+        .row3_c1{width: 225px;
+                 height: 250px;
+                 margin-left: 20px;
+                 margin-top: 9px;
+                float:left; }
+           .leftmenubbg{width: 215px;
+                       height: 240px;
+                       text-align: center;list-style:none;font-weight: bold;
+                       line-height:44px;
+           }
+           .leftmenubbg_item{width:213px;
+                            height: 40px;
+                        background-image: url('images/leftmenubg.png');
+                   }
+            .row3_c2{width:740px;
+                height:250px;
+                margin-top: 10px;float:left;
+              } 
+      .row4{width: 1000px;
+            height: 203px;
+            }
+           .row4_c1{width: 213px;
+                    height:193px;
+                    border:solid white 0.1px;
+                    background-image:url(images/whybg.jpg);
+                    background-position: 100% 100%; background-repeat: repeat-x;
+                    border-radius: 10px; 
+                    margin-left:17px; float: left;
+                    }             
+           .ol{list-style: none;margin-top: 15px;font-size:16px;text-align:left;color:white;} 
+           .head{text-align:center;font-size:9px;font-weight: bold; color: white; margin-top:13px;  } 
+           .li{margin: 2px;margin-left:10px;}  
+         .row4_c2{width: 348px;
+                  height:195px;
+                  border:solid white 0.1px; float:left; margin-left:12px; background-color:#fdc059; } 
+            .Coursesheading{font-family: Arial, Helvetica, sans-serif;
+                            font-size: 14px; color: white;
+                            text-decoration: underline;
+                            font-weight: bold;
+                            margin-top: 10px; margin-left: 12px;}
+             .typesofcourses{width: 326;
+                             height: 150;margin-left: 13px;
+                             font-family: Arial, Helvetica, sans-serif;
+                             font-size: 13px;
+                             line-height: 25px;
+                             font-weight: bold;
+                             color: #000;}
+           .row4_c3{width: 390px;
+                    height:195px;
+                    float:left; margin-left:12px;}
+      .row5{width: 1000px;
+            height:48px;
+            margin:16px auto; border-radius: 10px;
+            background-image: url('images/footer_middle.png'); text-align: center;} 
+            .footer_item{height: 48px; width: 900px;
+            line-height:45px; } 
+
+  .body{background-color: black;}
+               
