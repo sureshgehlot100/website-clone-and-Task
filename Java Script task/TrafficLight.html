@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Lighth</title>
+</head>
+<style>
+    * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+    body {
+        text-align: center;
+    }
+
+    main {
+        display: table;
+        padding: 10px;
+        margin: 50px auto;
+        border: 5px solid red;
+    }
+
+    .light {
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        border-radius: 50%;
+        margin: 20px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    button {
+        padding: 15px 25px;
+        font-size: 25px;
+        border-radius: 10px;
+        margin: 10px;
+    }
+</style>
+
+<body>
+    <main>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+    </main>
+    <button>Start</button>
+    <button>Stop</button>
+</body>
+<script>
+    let x;
+    let i = 0;
+    let a = 1;
+
+    const colors = ['red', 'yellow', 'green'];
+
+    let lights = document.querySelectorAll('.light');
+
+    let btns = document.querySelectorAll('button');
+
+    let start = btns[0];
+    let stop = btns[1];
+
+    start.addEventListener('click',
+    
+    () => {
+
+        x = setInterval(
+
+            () => {
+    // we use for loop because we want after 10s next light will be start end present one off means present light part will be blank//
+                for(var j = 0 ; j <= 2 ; j++) {
+
+                    lights[j].style.backgroundColor = 'black';
+                    lights[j].innerText = '';
+                }
+
+                lights[i].style.backgroundColor = `${colors[i]}`;
+
+                lights[i].innerText = a;
+
+                a++;
+
+                if(a == 11) {
+
+                    i++;
+
+                    a = 1;
+                    
+                    if(i == 3) {
+                        i = 0;
+                    }
+                }
+
+            },1000
+        )
+    }
+
+);
+
+stop.addEventListener('click',
+
+    () => {
+
+        clearInterval(x);
+    }
+)
+
+</script>
+
+</html>

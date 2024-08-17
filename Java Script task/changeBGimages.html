@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Change Background Image </title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        .box {
+            width: 1000px;
+            height: auto;
+            margin: 50px auto;
+            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+            
+        }
+
+        .main {
+            width: 300px;
+            height: 250px;
+            background-image: url('images/3.jpg');
+            background-position: center center;
+            background-size: cover;
+            border: 1px solid black;
+            
+        }
+
+        button {
+            font-size: 22px;
+            padding: 5px 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="main">
+
+        </div>
+        <div class="main">
+
+        </div>
+        <div class="main">
+
+        </div>
+    </div>
+    
+    <button> Change Background Image <span>0</span> </button>
+</body>
+<script>
+
+    let count = 0;
+
+    let counter = document.querySelector('span');
+
+   let main = document.querySelectorAll('.main');
+
+   let main1 = main[0];
+   let main2 = main[1];
+   let main3 = main[2];
+   
+   let btn = document.querySelector('button');
+
+   btn.addEventListener('click',
+   
+        () => {
+// this(For loop) prosess done b`coz we want to reset images // This concept will be use in traffic light when we want to reset light //
+            for(var i = 0 ; i <= 2 ; i++) {
+
+                main[i].style.width = '300px';
+                main[i].style.height = '250px';
+                main[i].style.backgroundImage = "url('images/3.jpg')";
+                main[i].style.transition = '0s';
+                main[i].style.borderRadius = '0px';
+            }
+
+           count++;
+
+           counter.innerText = count;
+//counter use to show number of click like 1 2 3 etc//
+           switch(count) {
+
+            case 1: {
+
+                main1.style.width = '300px';
+                main1.style.height = '300px';
+                main1.style.borderRadius = '50%';
+                main1.style.transition = '4s';
+                main1.style.backgroundImage = "url('images/2.jpg')";
+                break;
+            }
+
+            case 2: {
+
+                main2.style.width = '300px';
+                main2.style.height = '300px';
+                main2.style.borderRadius = '50%';
+                main2.style.transition = '4s';
+                main2.style.backgroundImage = "url('images/5.jpg')";
+                break;
+            }
+
+            case 3: {
+
+                main3.style.width = '300px';
+                main3.style.height = '300px';
+                main3.style.borderRadius = '50%';
+                main3.style.transition = '4s';
+                main3.style.backgroundImage = "url('images/4.jpg')";
+                break;
+            }
+
+           }
+
+           if(count == 3) {
+                count = 0;
+                
+           }
+        }
+   )
+
+</script>
+</html>

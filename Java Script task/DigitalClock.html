@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Digital Clock </title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        #clock {
+            width: 150px;
+            height: 150px;
+            background-color: cyan;
+            border-radius: 50%;
+            margin: 50px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div id="clock">
+        00 : 00 : 00
+    </div>
+</body>
+<script>
+
+    let clock = document.querySelector('#clock');
+
+    window.addEventListener('load',
+    
+        () => {
+
+            setInterval(
+
+                () => {
+
+                    let date = new Date();
+// new Date() fix function hai jo hume apne laptop ka Time ,Date, Hour , Minutes and Second sab lake de deta hai; Bad hum date.getHours() jise chahe use use kr skte hai//
+                    let h = date.getHours()
+
+                    let m = date.getMinutes()
+
+	                let s = date.getSeconds();
+
+                    clock.innerText = `${h} : ${m} : ${s}`;
+
+                },1000
+
+            )
+
+        }
+    )
+
+    
+
+
+</script>
+</html>

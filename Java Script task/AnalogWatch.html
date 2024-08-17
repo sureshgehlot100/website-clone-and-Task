@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Analog Clock </title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        #clock {
+            width: 150px;
+            height: 150px;
+            background-color: orange;
+            border-radius: 50%;
+            margin: 50px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="clock">
+        00 : 00 : 00
+    </div>
+</body>
+<script>
+    let clock = document.querySelector('#clock');
+    let count = 0;
+    let m = 10;
+    let h = 10;
+    
+    
+    window.addEventListener('load',
+
+        () => {
+
+         setInterval(
+
+                () => {
+
+                    count++;
+
+                    let s = count;
+                   
+                    if (s == 60) {
+                        m++;
+                        count = '00';
+                    }
+                    if (m == 60) {
+                        h++;
+                        m = "00"
+                    }
+                    if (h == 24){
+
+                        h = "00";
+                    }
+                    clock.innerText = `${h} : ${m} : ${s}`;
+
+                }, 1000
+
+            );
+
+        }
+    )
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Box </title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        main {
+            width: 300px;
+            height: 400px;
+            border: .1px solid red;
+            margin: 50px auto;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: darkgray;
+            
+        }
+
+        .box {
+            width: 32%;
+            height: 100px;
+            margin: 10px auto;
+            background-color: darkgray;
+            text-align: center;
+            justify-content: space-around;
+            border: 1px solid white;
+            line-height: 95px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+    </main>
+
+</body>
+<script>
+
+    let count = 0;
+    let boxes = document.querySelectorAll('.box');
+
+    let box1 = boxes[0];
+    let box2 = boxes[1];
+    let box3 = boxes[2];
+    let box4 = boxes[3];
+    let box5 = boxes[4];
+    let box6 = boxes[5];
+    let box7 = boxes[6];
+    let box8 = boxes[7];
+    let box9 = boxes[8];
+    console.log(box1)
+    box1.addEventListener('click',
+    
+    () => {
+          setInterval(
+          () => { box1.style.backgroundColor = "red";
+
+           count++;
+
+           if( count == 1){
+            box1.disabled = true;
+             
+                  }
+
+                }
+          ), 1000;
+    }
+     
+    );
+    box2.addEventListener('click',
+    
+    () => {
+          
+           box2.style.backgroundColor = "red";
+
+           count++;
+
+           if( count == 1){
+            box2.disabled = true;
+             
+           }
+    }
+     
+    )
+    box3.addEventListener('click',
+    
+    () => {
+          
+           box3.style.backgroundColor = "red";
+
+           count++;
+
+           if( count == 1){
+            box3.disabled = true;
+             
+           }
+    }
+     
+    )
+    box4.addEventListener('click',
+    
+    () => {
+          
+           box4.style.backgroundColor = "red";
+
+           count++;
+
+           if( count == 1){
+            box4.disabled = true;
+             
+           }
+    }
+     
+    )
+    box5.addEventListener('click',
+    
+    () => {
+          
+           box5.style.backgroundColor = "red";
+
+           count++;
+
+           if( count == 1){
+            box5.disabled = true;
+             
+           }
+    }
+     
+    )
+    box6.addEventListener('click',
+    
+    () => {
+          
+           box6.style.backgroundColor = "red";
+
+           count++;
+
+           if( count == 1){
+            box1.disabled = true;
+             
+           }
+    }
+     
+    )
+    box7.addEventListener('click',
+    
+    () => {
+          
+           box7.style.backgroundColor = "red";
+
+           count++;
+
+           if( count == 1){
+            box7.disabled = true;
+             
+           }
+    }
+     
+    )
+    box8.addEventListener('click',
+    
+    () => {
+          
+           box8.style.backgroundColor = "red";
+
+           count++;
+
+           if( count == 1){
+            box8.disabled = true;
+             
+           }
+    }
+     
+    )
+    box9.addEventListener('click',
+    
+    () => {
+          
+           box9.style.backgroundColor = "red";
+
+           count++;
+
+           if( count == 1){
+            box9.disabled = true;
+             
+           }
+    }
+     
+    )
+
+
+
+</script>
+
+</html>

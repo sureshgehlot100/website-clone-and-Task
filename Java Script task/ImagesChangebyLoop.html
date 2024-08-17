@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images Change In Slider</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        main {
+            margin: 50px auto;
+            width: 700px;
+            position: relative;
+        }
+
+        .screen {
+            height: 250px;
+        }
+
+        .screen>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        button {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        #btn1 {
+            position: absolute;
+            left: 0px;
+            top: 100px;
+        }
+
+        #btn2 {
+            position: absolute;
+            right: 0px;
+            top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="screen"><img src="images/9.jpg" alt=""></div>
+        <button id="btn1">
+            < </button>
+                <button id="btn2"> > </button>
+    </main>
+</body>
+
+<script>
+
+    let changeImg = (e) => {
+
+        if (e.target.tagName == 'BUTTON') {
+
+            if (e.target.id == 'btn1') {
+
+                let currentIndex = images.indexOf(screen.src);
+
+                let index = currentIndex - 1;
+// because click on left button so, we can -1 from current index//
+                if (index == -1) {
+//if we get index -1 than we can + image.length which is last image//
+                    index = index + images.length;
+                }
+
+                screen.src = images[index];
+            } else {
+
+                let currentIndex = images.indexOf(screen.src);
+
+                let index = currentIndex + 1;
+
+                if (index == images.length) {
+//when Index reach on last Images (images.length) than we put index 0 which is first Images//
+                    index = 0;
+                }
+
+                screen.src = images[index];
+            }
+        }
+    }
+
+    const images = ['http://127.0.0.1:5500/images/1.jpg', 'http://127.0.0.1:5500/images/2.jpg', 'http://127.0.0.1:5500/images/3.jpg', 'http://127.0.0.1:5500/images/4.jpg', 'http://127.0.0.1:5500/images/5.jpg', 'http://127.0.0.1:5500/images/6.jpg'];
+
+    let screen = document.querySelector("img")
+
+    let main = document.querySelector('main');
+    // pure main ko hi pakd liya bad me e.target se alag kar dege;//
+
+    main.addEventListener('click', changeImg);
+
+
+
+</script>
+
+</html>

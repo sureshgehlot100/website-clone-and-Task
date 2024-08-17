@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy HTML Structure</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .box {
+            width: 200px;
+            height: 200;
+            padding: 5px;
+            border: .1px solid red;
+            margin: 50px auto;
+        }
+
+        img {
+            width: inherit;
+        }
+
+        .boxes {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="boxes">
+            <div class="box">
+                <img src="images/9.jpg" alt="">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt temporibus at dicta
+                    necessitatibus? Eligendi asperiores, quasi excepturi dignissimos facere maxime velit, deleniti
+                    molestiae et quos ea accusamus eum pariatur eos!</p>
+            </div>
+            <div class="box"></div>
+        </div>
+        <button>copy</button>
+        <button>Clear</button>
+
+    </main>
+</body>
+<script>
+    let boxes = document.querySelectorAll('.box');
+    let box1 = boxes[0];
+    let box2 = boxes[1];
+    
+    let btns = document.querySelectorAll('button');
+
+    let copy = btns[0];
+    let clear = btns[1];
+
+    copy.addEventListener('click',
+    
+      () => {
+        let structure = box1.innerHTML;
+        //there is a difference between .innerText(only use to bring text) and .innerHTML(Bring Every part of HTML structure)//
+        
+        box2.innerHTML = structure;
+      }
+    )
+    clear.addEventListener('click',
+    
+      () => {
+        let structure = '';
+        
+        box2.innerHTML = structure;
+      }
+    )
+
+
+</script>
+
+</html>

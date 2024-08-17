@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bulb Tonggle</title>
+</head>
+<style>
+    .image {
+        margin: 50px auto;
+        width: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .button {
+        width: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 3px auto;
+    }
+</style>
+
+<body>
+    <div class="image">
+        <img src="images/multi_bulb_on.jpg" alt="">
+    </div>
+    <div class="button">
+        <button>ON</button>
+    </div>
+</body>
+<script>
+
+
+   let changeStatus = () => {
+        if (btn.innerText == 'ON') {
+
+            img.src = 'images/multi_bulb_on.jpg';
+
+            btn.innerText = 'OFF';
+
+        } else {
+
+            img.src = 'images/multi_bulb_off.jpg';
+
+            btn.innerText = 'ON';
+
+        }
+    }
+    let img = document.querySelector('img');
+
+    let btn = document.querySelector('button');
+
+    btn.addEventListener('click',changeStatus);
+
+</script>
+
+</html>

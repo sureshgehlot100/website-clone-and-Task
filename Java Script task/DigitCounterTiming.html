@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Digit Counter </title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .main {
+            width: 400px;
+            height: auto;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .counter {
+            width: 100px;
+            height: 100px;
+            background-color: cyan;
+            border-radius: 50%;
+            margin: 15px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+        }
+
+        button {
+            font-size: 21px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .box {
+            width: 800px;
+            height: 250px;
+            margin: auto;
+            border: 1px solid red;
+            border-radius: 20px;
+            font-size: 40px;
+            color: red;
+            font-weight: bold;
+            font-style: italic;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="counter">
+            0
+        </div>
+        <button> Start </button>
+        <button> Stop </button>
+        <button> Reset </button>
+    </div>
+    <div class="box">
+
+    </div>
+</body>
+<script>
+
+    let x, y;
+// x,y variable ishliye liye taki hum inse clearinterval krne me use kr sake//
+    let counter = document.querySelector('.counter');
+    let box = document.querySelector('.box');
+
+    let btn = document.querySelectorAll('button');
+    let start = btn[0];
+    let stop = btn[1];
+    let reset = btn[2];
+
+    start.addEventListener('click',
+
+        () => {
+
+            x = setInterval(
+// this is use when we want function repeated after interval of time work like For loop But For loop happens in milisecond and don`t control speed so in this process loop aoutomatically repeat in 1000 milisecond//
+                () => {
+
+                    let count = counter.innerText;
+
+                    count++;
+
+                    counter.innerText = count;
+
+                    if (count == 11) {
+//when count == 11 we move to new pages//
+                        window.open('https://www.lawpreptutorial.com/', '_blank');
+
+                    }
+                }, 1000
+            );
+// Timeout use to show something after some time but show only one time //
+            y = setTimeout(
+                () => {
+
+                    box.innerText = 'Gaurav is a smart boy';
+
+                }, 10000
+            )
+        }
+    );
+    stop.addEventListener('click',
+        
+        () => {
+
+            clearInterval(x);
+
+            clearTimeout(y);
+        }
+    
+    );
+    reset.addEventListener('click',
+    
+    () => {
+           
+        counter.innerText = '0';
+
+    }
+    );

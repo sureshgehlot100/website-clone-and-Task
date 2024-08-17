@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculator </title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        table {
+            margin: 50px auto;
+            border-spacing: 5px;
+            background-color: lightgray;
+            border-radius: 20px;
+            border: 1px solid red;
+        }
+
+        td {
+            border: 1px solid red;
+            border-radius: 20px;
+            padding: 15px;
+            background-color: black;
+            text-align: center;
+        }
+
+        button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: cyan;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+
+        }
+
+        input {
+            width: 100%;
+            height: 40px;
+            border-radius: 10px;
+            text-align: right;
+            padding-right: 5px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="table">
+        <tr>
+            <td> <button id="clr">C</button> </td>
+            <td> <button>.</button> </td>
+            <td colspan="2"> <input type="text" id="screen" readonly /> </td>
+            <!-- read only use only for read permission we can`t add on anything-->
+        </tr>
+        <tr>
+            <td> <button>+</button> </td>
+            <td> <button>1</button> </td>
+            <td> <button>2</button> </td>
+            <td> <button>3</button> </td>
+        </tr>
+        <tr>
+            <td> <button>-</button> </td>
+            <td> <button>4</button> </td>
+            <td> <button>5</button> </td>
+            <td> <button>6</button> </td>
+        </tr>
+        <tr>
+            <td> <button>*</button> </td>
+            <td> <button>7</button> </td>
+            <td> <button>8</button> </td>
+            <td> <button>9</button> </td>
+        </tr>
+        <tr>
+            <td> <button>/</button> </td>
+            <td> <button id="backspace">X</button> </td>
+            <td> <button>0</button> </td>
+            <td> <button id="output"> = </button> </td>
+        </tr>
+    </table>
+</body>
+<script>
+
+    let flag = 0;
+    //we use flag b`coz when we click on =(result) and get result but after that click on number is concative with reslt but we want that when we click on number it replace it and start new process//
+    //but in symbol case we can do process continue b`coz we can do maths operation with result like = '+ , - etc'//
+
+    const symbols = ['+', '-', '*', '/', '.'];
+
+    let table = document.querySelector('table');
+
+    // bring all table tag in single after that we can saperate it by e.target//
+
+    let screen = document.querySelector('input');
+
+    table.addEventListener('click',
+
+        (e) => {
+
+            if (e.target.tagName == 'BUTTON') {
+
+                let keyData = e.target.innerText;
+
+                let oldData = screen.value;
+
+                if ((keyData != 'C') && (keyData != 'X') && (keyData != '=')) {
+                    // we do this process that if first time click on C(clear),X(delete) and =(Result) than nothing show in screen//
+
+                    if (symbols.includes(keyData)) {
+                        // Ab hume symbol ko pehle aane se block krna hai ( +-*/ etc) means first click pr symbol na aaye//
+                        // code ye batana padega ki symbol aise hote hai so humne symbol name se arrey banaya hai//
+                        //Now, we can use includes on symbol . if we get value as symbol than includes will send value 1 otherwuse -1 means click vali value arrey se nhi hai//
+                        flag = 0;
+                        // flag = 0 means result(=) k bad symbol hi click hua hai//
+
+                        let lastDigit = oldData[oldData.length - 1];
+
+                        // Ab problem ye hai ki symbol agr last digit hai or hum vapas symbol pr click kre to vo concativenate ho jata hai jabki hona ye chahiye tha ki dusra symbol pehle ko replace kare //
+                        // So we get last digit through( old data.length - 1 ) //
+                        if (symbols.includes(lastDigit)) {
+                            // if last digit is symbol than code enter in this process otherwise goes into else part//
+                            oldData = oldData.slice(0, oldData.length - 1);
+
+                            //slice se last symbol hata kr dusre symbol ko laga dege//
+
+                            console.log(oldData);
+
+                            screen.value = oldData + keyData;
+
+                        } else {
+
+                            screen.value = oldData + keyData;
+                            // oldData and KeyData  are concative so number show in line one by one on click (34562728...)//
+
+                        }
+
+                    } else {
+                        if (flag == 1) {
+                        //flag = 1 means result k baad number pe click hua to hume old data ko khali krna hoga//
+                            oldData = '';
+
+                            flag = 0;
+
+                        }
+
+                        screen.value = oldData + keyData;
+                    }
+
+
+                }
+
+                else if (keyData == 'C') {
+                    // when we click on C button it will be clear all//
+                    screen.value = '';
+                }
+
+                else if (keyData == '=') {
+                    // when we click on = button it will be show result//
+                    screen.value = eval(screen.value)
+                    //** eval is use for all mathamatical operation manually , also this is use in string data  //
+                }
+
+                else {
+                    // this process for delete 'X' cross last digit//
+                    oldData = screen.value;
+                    // hum old data ki length nikal kar usme ek(-) kr ke slice laga dege jo last element ko hta dega//
+                    screen.value = oldData.slice(0, oldData.length - 1);
+                }
+
+            }
+
+
+
+        }
+    )
+</script>
+
+</html>

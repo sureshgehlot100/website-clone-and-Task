@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> classList Object </title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .main {
+            width: 800px;
+            height: auto;
+            padding: 15px;
+            margin: 50px auto;
+            border-radius: 20px;
+            background-color: cyan;
+            font-size: 30px;
+            text-align: justify;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 5px 8px;
+            border-radius: 8px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .bg {
+            background-color: red;
+            color: white;
+            font-style: italic;
+            line-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+       
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam est, vel dicta animi maxime id nesciunt nulla porro ducimus voluptatum perferendis mollitia eius, doloremque libero aspernatur quod nostrum quo officiis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dolore architecto tempora, maxime recusandae minima, excepturi asperiores deserunt ipsa dolorem aperiam laborum commodi iusto consectetur fugiat voluptatum, repellat porro dolorum.
+      
+    </div>
+    <button> Add Class</button>
+    <button> Remove Class </button>
+    <button> Toggle Class </button>
+</body>
+<script>
+
+    let main = document.querySelector('.main');
+
+    let btns = document.querySelectorAll('button');
+
+    let add = btns[0];
+    let remove = btns[1];
+    let toggle = btns[2];
+
+    add.addEventListener('click',
+    
+        () => {
+        //  use for Add new class//
+            main.classList.add('bg');
+        }
+    );
+       //  use for Remove class//   
+    remove.addEventListener('click',
+        
+        () => {
+
+            main.classList.remove('bg');
+        }
+    );
+   //  use for both Add and Remove class//  
+    toggle.addEventListener('click',
+        
+        () => {
+
+            main.classList.toggle('bg');
+        }
+    
+    )
+
+</script>
+</html>

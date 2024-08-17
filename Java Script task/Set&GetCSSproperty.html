@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Get & Set Background Color </title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        main {
+            width: 800px;
+            height: auto;
+            padding: 10px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .box {
+            width: 100%;
+            height: 250px;
+            border: 1px solid black;
+            border-radius: 20px;
+            background-color: red;
+            margin: 20px 0px;
+        }
+
+        input {
+            margin: 20px;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 5px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="box">
+
+        </div>
+        <input type="text" />
+        <button> Get Backgrond Color </button>
+        <button> Set Backgrond Color </button>
+    </main>
+</body>
+<script>
+
+    let box = document.querySelector('.box');
+    let input = document.querySelector('input');
+
+    let btns = document.querySelectorAll('button');
+
+    let getbtn = btns[0];
+    let setbtn = btns[1];
+
+    getbtn.addEventListener('click',
+
+        () => {
+
+            let cssProps = getComputedStyle(box);
+
+            let bg = cssProps['background-color'];
+
+            input.value = bg;
+        }
+    )
+
+    setbtn.addEventListener('click',
+
+        () => {
+
+            if (input.value != '') {
+
+                box.style.backgroundColor = `${input.value}`;
+                box.style.transition = '2s';
+
+                input.value = '';
+            } else {
+
+                input.placeholder = 'No data found...';
+            }
+        }
+    )
+
+</script>
+
+</html>

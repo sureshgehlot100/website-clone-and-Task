@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS Properties Set & Change </title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        .main {
+            width: 800px;
+            height: 300px;
+            border: 0.1px solid black;
+            margin: 50px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            font-style: italic;
+            font-weight: bold;
+            background-color: cyan;
+            transition: 2s;
+        }
+        button {
+            font-size: 25px;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        Suresh is a smart boy
+    </div>
+    <button> Change Shape </button>
+</body>
+<script>
+
+    let main = document.querySelector('.main');
+
+    let btn = document.querySelector('button');
+
+    btn.addEventListener('click',
+    
+        () => {
+        //   use .style after class and before attributes//
+            main.style.width = '500px';
+            main.style.height = '500px';
+            main.style.borderRadius = '50%';
+       // if we get property long Name like border than write it with Capital for eg. - borderRadious//
+        }
+    )
+
+</script>
+</html>

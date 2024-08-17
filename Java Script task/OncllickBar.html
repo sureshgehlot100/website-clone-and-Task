@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <title>Click Menubar Open</title>
+    <style>
+        .box {
+            width: 100dvw;
+            height: 30px;
+            background-color: silver;
+        }
+
+        i {
+            font-size: 30px;
+            color: black;
+            text-align: left;
+            cursor: pointer;
+        }
+
+
+        .hidden {
+            width: 100dvw;
+            height: 50px;
+            font-size: 20px;
+            color: black;
+            transform: scale(0);
+            
+        }
+
+        .bg {
+            background-color: red;
+            color: white;
+            font-style: italic;
+            line-height: 40px;
+            transform: scale(1);
+            font-size: 20px;
+            width: 100dvw;
+            height: 50px;
+           
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="box">
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+        <div class="hidden">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus enim quidem doloribus iusto repellendus
+            error, suscipit eius quo laborum! Eius facilis, numquam maiores nemo ipsa illo ea officiis architecto.
+            Libero.
+        </div>
+    </main>
+
+</body>
+<script>
+
+    let boxes = document.querySelector('.box');
+    let toggle = document.querySelector('.fa-angle-down')
+    let hidden = document.querySelector('.hidden')
+
+    console.log(hidden)
+
+    toggle.addEventListener('click',
+
+        () => {
+
+            hidden.classList.toggle('bg');
+        }
+
+    )
+</script>
+
+</html>

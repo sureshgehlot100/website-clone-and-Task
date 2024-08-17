@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Digit Counter </title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        .main {
+            width: 150px;
+            height: 150px;
+            background-color: cyan;
+            border-radius: 50%;
+            margin: 50px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        button {
+            font-size: 25px;
+            padding: 10px 15px;
+            margin: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            background-color: lightgray;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        0
+    </div>
+    <button> + </button>
+    <button> Reset </button>
+    <button> - </button>
+</body>
+<script>
+    let main = document.querySelector('.main');
+    let btns = document.querySelectorAll('button');
+    let pulse = btns[0];
+    let Reset = btns[1];
+    let minus = btns[2];
+
+    minus.disabled = true;
+
+    pulse.addEventListener('click',
+
+        () => {
+
+            minus.disabled = false
+            
+            let count = main.innerText;
+            if(count == 5){
+                return;
+            }
+
+            count++;
+
+            // console.log(count); (Interview Question when we search the typeOf innertext of main (which is '0') is string but it work like number in this process
+            //count++ this is JS automatic nature which convert string into number when required//
+
+            main.innerText = count;
+
+            if (count >= 5) {
+
+                plus.disabled = true;
+                // Like a disabled there are also different type of property which use to fridge or disable click button -ex = pointerEvents //
+
+                return;
+            }
+        }
+    );
+    minus.addEventListener('click',
+
+        () => {
+
+            plus.disabled = false;
+
+            let count = main.innerText;
+
+            if (count < 1) {
+
+                minus.disabled = true;
+
+                return;
+            }
+
+            count--;
+
+            main.innerText = count;
+
+            if (count == 0) {
+
+                minus.disabled = true;
+                return;
+            }
+        }
+    );
+
+    reset.addEventListener('click',
+
+        () => {
+
+            main.innerText = '0';
+
+            plus.style.pointerEvents = 'none';
+            minus.style.pointerEvents = 'fill';
+        }
+    )
+</script>
+
+
+
+</html>

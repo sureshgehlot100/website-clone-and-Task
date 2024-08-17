@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change background Images</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: aqua;
+            text-align: center;
+        }
+
+        .box {
+            background-color: red;
+            width: 300px;
+            height: 300px;
+            margin: 50px auto;
+            border-radius: 20px;
+        }
+
+        button {
+            font-size: 22px;
+            padding: 5px 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <button>Change Color</button>
+
+</body>
+<script>
+   let box = document.querySelector('.box')
+    let btn = document.querySelector('button');
+
+    btn.addEventListener('mouseover',
+    () => {
+      box.style.backgroundColor = "blue";
+    })
+</script>
+
+</html>

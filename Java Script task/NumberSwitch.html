@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Game </title>
+    <style>
+        main {
+            width: 500px;
+            height: 300px;
+            border: .1px solid red;
+            margin: 50px auto;
+
+        }
+
+        .boxes {
+            display: flex;
+
+        }
+
+        .box {
+            width: 100px;
+            border: .1px solid red;
+            height: 100px;
+            margin: 50px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
+
+        .button {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        button {
+            width: 50px;
+            border: .1px solid red;
+            height: 40px;
+            justify-content: space-around;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="boxes">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box"></div>
+        </div>
+        <div class="button">
+            <button>></button>
+            <button>>></button>
+            <button></button>
+        </div>
+    </main>
+
+</body>
+<script>
+
+    let boxes = document.querySelectorAll('.box');
+    let box1 = boxes[0];
+    let box2 = boxes[1];
+    let box3 = boxes[2];
+
+    let button = document.querySelectorAll('button');
+    let btn1 = button[0];
+    let btn2 = button[1];
+    let btn3 = button[2];
+
+    btn1.addEventListener('click',
+
+        () => {
+
+            if (box1.innerText != '') {
+
+                if (box2.innerText != '') {
+
+                    box3.innerText = box2.innerText;
+
+                    box2.innerText = box1.innerText;
+
+                    box1.innerText = '';
+
+                } else {
+
+                    box2.innerText = box1.innerText;
+
+                    box1.innerText = '';
+                }
+
+            } else {
+                alert("It's already Blank...");
+            }
+        }
+    );
+
+    btn2.addEventListener('click',
+
+        () => {
+
+            if (box2.innerText != '') {
+
+                if (box3.innerText != '') {
+
+                    box1.innerText = box3.innerText;
+
+                    box3.innerText = box2.innerText;
+
+                    box2.innerText = '';
+
+                } else {
+
+                    box3.innerText = box2.innerText;
+
+                    box2.innerText = '';
+                }
+
+            } else {
+                alert("It's already Blank...");
+            }
+        }
+    );
+
+    btn3.addEventListener('click',
+
+        () => {
+
+            if (box3.innerText != '') {
+
+                if (box1.innerText != '') {
+
+                    box2.innerText = box1.innerText;
+
+                    box1.innerText = box3.innerText;
+
+                    box3.innerText = '';
+
+                } else {
+
+                    box1.innerText = box3.innerText;
+
+                    box3.innerText = '';
+                }
+
+            } else {
+                alert("It's already Blank...");
+            }
+        }
+    )
+
+
+
+</script>
+
+</html>

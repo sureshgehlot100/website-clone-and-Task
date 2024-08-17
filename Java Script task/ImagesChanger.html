@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images Changer</title>
+    <style>
+        *{padding: 0px;
+          margin: 0px;
+          box-sizing: border-box;}
+        main {
+            border: .1px solid red;
+            margin: 50px auto;
+            width: 700px;
+            height: 400px;
+        }
+
+        .screen {
+            border: .1px solid red;
+            height: 250px;
+        }
+
+        .screen>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .boxes {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .box {
+            width: 150px;
+            height: 100px;
+            border: .1px solid red;
+            margin: 20px auto;
+        }
+
+        .box>img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="screen"><img src="images/9.jpg" alt=""></div>
+        <div class="boxes">
+            <div class="box"><img src="images/1.jpg" alt=""></div>
+            <div class="box"><img src="images/2.jpg" alt=""></div>
+            <div class="box"><img src="images/3.jpg" alt=""></div>
+            <div class="box"><img src="images/4.jpg" alt=""></div>
+        </div>
+    </main>
+
+</body>
+<script>
+
+    let changeImg = (e) =>{
+    //    e = is work like "this" which bring all things inside . we differenciate useful attributes through tagname. like tagname there are more attributes .google them//
+    // / e.target(this is a fix syntax )//
+        if(e.target.tagName){
+
+        screen.src = e.target.src;
+        }
+    }
+
+    let screen = document.querySelector('img')
+
+    // above we called all img in html so they came by line by line from(screen[0]) up to down[5] box.//
+
+    let boxes = document.querySelector('.boxes')
+    // b`coz addeventlistener only work on single object and not on collectin of object so, we insert all boxes attributes in single object boxes//
+    
+    boxes.addEventListener('click',changeImg);
+    // when we want two or more event than we call back function(changeImg) and  do whole process in function and put above .
+</script>
+
+</html>
