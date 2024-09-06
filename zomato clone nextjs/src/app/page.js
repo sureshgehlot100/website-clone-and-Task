@@ -19,22 +19,22 @@ export default function Home() {
   const collectionArr = [
     {
       title: "Sweet Tooth",
-      bg: "url('https://b.zmtcdn.com/data/collections/8475397d26a71d08e02b03c00eb7934c_1615540920.jpg?output-format=webp')",
+      bg: "https://b.zmtcdn.com/data/collections/8475397d26a71d08e02b03c00eb7934c_1615540920.jpg?output-format=webp",
       places: "12 PLaces"
     },
     {
       title: "Royal Rajasthani Cuisine",
-      bg: "url('https://b.zmtcdn.com/data/collections/3c93a643c4d0e43a599c56e4c5887c28_1614943766.jpg?output-format=webp')",
+      bg: "https://b.zmtcdn.com/data/collections/7771cf3a18e1da2916794d3998260c69_1705557723.png?output-format=webp",
       places: "7 PLaces"
     },
     {
       title: "Must visit Jodhpur restaurants",
-      bg: "url('https://b.zmtcdn.com/data/collections/148d9accc60cf620f4781ae1d9a1eb4c_1528280845.jpg?output-format=webp')",
+      bg: "https://b.zmtcdn.com/data/collections/fbd237478a5d3b6ea08de83c30230cdd_1705558245.png?output-format=webp",
       places: "8 PLaces"
-    }
-    , {
+    },
+    {
       title: "Meat Cravings",
-      bg: "url('https://b.zmtcdn.com/data/collections/bb455325350e11bff99e88ef68b3f89d_1614940676.jpg?output-format=webp')",
+      bg: "https://b.zmtcdn.com/data/collections/684397cd092de6a98862220e8cc40aca_1709810183.png?output-format=webp",
       places: "7 PLaces"
     }
   ]
